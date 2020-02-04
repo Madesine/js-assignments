@@ -8,24 +8,22 @@ if ("0") {
 } // Да, выведется.
 
 // 3
-if(prompt(`Какое "официальное" название JavaScript ?`) === "ECMAScript")	alert("Верно!");
-	else alert("Не знаете? ECMAScript!");
+if(prompt(`Какое "официальное" название JavaScript ?`) === "ECMAScript") alert("Верно!");
+else alert("Не знаете? ECMAScript!");
 
 // 4
 const number = Number(prompt("Введите число: "));
 
 if(number > 0) alert("1");
-	else if(number < 0) alert("-1");
-		else alert("0");
+else if(number < 0) alert("-1");
+else alert("0");
 
 // 5
 let result;
 
-if (a + b < 4) {
-  result = 'Мало';
-} else {
-  result = 'Много';
-}
+if ( a + b < 4) result = 'Мало';
+else result = 'Много';
+
 
 result = a + b < 4 ? `Мало` : `Много`;
 
@@ -43,8 +41,8 @@ if (login == "Сотрудник") {
 }
 
 message =
-  login == "Сотрудник"
-    ? "Привет"
+	login == "Сотрудник"
+		? "Привет"
     : login == "Директор"
     ? "Здравствуйте"
     : login == ""
@@ -69,16 +67,16 @@ alert( null || 2 && 3 || 4 ); // 3
 // 12
 const age;
 
-if(age >= 14 && age <=90) alert("pisya");
+if(age >= 14 && age <= 90) alert("Hello");
 
 // 13
 const age;
 
-if(!(age >= 14 && age <=90)) alert(`pisya`);
+if(!(age >= 14 && age <= 90)) alert(`pisya`);
 if(age < 14 || age > 90) alert(`olga`);
 
 // 14
-if(...)?
+// if(...)?
 
 if (-1 || 0) alert( 'first' ); // true; выполниться
 if (-1 && 0) alert( 'second' ); // false; не выполниться
@@ -92,9 +90,13 @@ if (login === `Админ`) {
 
   if (password === `Я главный`) alert(`Здравствуйте!`);
   else if (password === `` || password === null) alert(`Отменено`);
-  else alert(`Неверный пароль`);
-} else if (login === `` || login === null) alert(`Отменено`);
-else alert(`Я вас не знаю`);
+	else alert(`Неверный пароль`);
+	
+} else if (login === `` || login === null) {
+	alert(`Отменено`);
+} else {
+	alert(`Я вас не знаю`);
+}
 
 // 16
 let i = 3;
@@ -103,19 +105,19 @@ while (i) {
 } // 1, тк 0 = false и цикл не запуститься дальше
 
 // 17
-Префиксный вариант ++i:
+// Префиксный вариант ++i:
 let i = 0;
 while (++i < 5) alert( i ); //1 2 3 4 5
 
-Постфиксный вариант i++
+// Постфиксный вариант i++
 let i = 0;
 while (i++ < 5) alert( i ); //1 2 3 4
 
 // 18
-Постфиксная форма:
+// Постфиксная форма:
 for (let i = 0; i < 5; i++) alert( i ); // 0 1 2 3 4
 
-Префиксная форма:
+// Префиксная форма:
 for (let i = 0; i < 5; ++i) alert( i ); // 0 1 2 3 4
 
 // 19
@@ -132,15 +134,18 @@ while(i++ < 2) alert( `number ${i}!` );
 // 21
 while(true){
 	const number = Number(prompt(`Число`));
-	if(number > 100 || number === `` || number === null) break;
+
+	if(number > 100 || number === `` || number === null) {
+		break;
+	}
 }
 
 // 22
 switch (browser) {
   case "Edge":
     alert("You've got the Edge!");
-    break;
-
+		break;
+		
   case "Chrome":
   case "Firefox":
   case "Safari":
@@ -152,15 +157,18 @@ switch (browser) {
     alert("We hope that this page looks ok!");
 }
 
-if (browser === "Edge") alert("You've got the Edge!");
-else if (
+if (browser === "Edge") {
+	alert("You've got the Edge!");
+} else if (
   browser === "Chrome" ||
   browser === "Firefox" ||
   browser === "Safari" ||
   browser === "Opera"
-)
-  alert("Okay we support these browsers too");
-else alert("We hope that this page looks ok!");
+) {
+	alert("Okay we support these browsers too");
+}	else {
+	alert("We hope that this page looks ok!");
+} 
 
 // 23
 const number = +prompt("Введите число между 0 и 3", "");
@@ -187,7 +195,8 @@ switch (number) {
   case 2:
   case 3:
     alert("Вы ввели число 2, а может и 3");
-    break;
+		break;
+		
   default:
     break;
 }
@@ -196,13 +205,13 @@ switch (number) {
 function checkAge(age) {
   if (age > 18) {
     return true;
-  } else {
+	} else {
     // ...
     return confirm('Родители разрешили?');
   }
 }
 
-Будет ли эта функция работать как-то иначе, если убрать else?
+// Будет ли эта функция работать как-то иначе, если убрать else?
 
 function checkAge(age) {
   if (age > 18) {
@@ -231,8 +240,10 @@ function min(a,b) {
 
 // 27
 function pow(x, n) {
-  let result = 1;
-  while (n-- > 0) result *= x;
+	let result = 1;
+	
+	while (n-- > 0) result *= x;
+	
   return result;
 }
 
