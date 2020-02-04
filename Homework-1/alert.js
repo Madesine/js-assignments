@@ -11,8 +11,8 @@ admin = name;
 alert(admin);
 
 // 4
-const olga = "Земля";
-const OLGA = "Ольга";
+const planetEarth = "Земля";
+const currentUser = "Ольга";
 
 // 5
 let name = "Ilya";
