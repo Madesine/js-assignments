@@ -8,22 +8,31 @@ if ("0") {
 } // Да, выведется.
 
 // 3
-if(prompt(`Какое "официальное" название JavaScript ?`) === "ECMAScript") alert("Верно!");
-else alert("Не знаете? ECMAScript!");
+if(prompt(`Какое "официальное" название JavaScript ?`) === "ECMAScript") {
+	alert("Верно!");
+} else {
+	alert("Не знаете? ECMAScript!");
+}
 
 // 4
 const number = Number(prompt("Введите число: "));
 
-if(number > 0) alert("1");
-else if(number < 0) alert("-1");
-else alert("0");
+if (number > 0) {
+  alert('1');
+} else if (number < 0) {
+  alert('-1')
+} else {
+  alert('0');
+}
 
 // 5
 let result;
 
-if ( a + b < 4) result = 'Мало';
-else result = 'Много';
-
+if ( a + b < 4) {
+	result = 'Мало';
+} else {
+	result = 'Много';
+} 
 
 result = a + b < 4 ? `Мало` : `Много`;
 
@@ -41,13 +50,13 @@ if (login == "Сотрудник") {
 }
 
 message =
-	login == "Сотрудник"
-		? "Привет"
-    : login == "Директор"
-    ? "Здравствуйте"
-    : login == ""
-    ? "Нет логина"
-    : "";
+  login == 'Сотрудник'
+    ? 'Привет'
+    : login == 'Директор'
+    ? 'Здравствуйте'
+    : login == ''
+    ? 'Нет логина'
+    : '';
 
 // 7
 alert( null || 2 || undefined ); // 2
@@ -67,107 +76,133 @@ alert( null || 2 && 3 || 4 ); // 3
 // 12
 const age;
 
-if(age >= 14 && age <= 90) alert("Hello");
+if(age >= 14 && age <= 90) {
+	alert("Hello");
+}
 
 // 13
 const age;
 
-if(!(age >= 14 && age <= 90)) alert(`pisya`);
-if(age < 14 || age > 90) alert(`olga`);
+if(!(age >= 14 && age <= 90)) {
+	alert("Hello");
+}
+if(age < 14 || age > 90) {
+	alert("Bye-Bye");
+}
 
 // 14
 // if(...)?
 
-if (-1 || 0) alert( 'first' ); // true; выполниться
-if (-1 && 0) alert( 'second' ); // false; не выполниться
-if (null || -1 && 1) alert( 'third' ); // true; выполниться
+if (-1 || 0) {
+	alert('first');
+} // true; выполниться
+if (-1 && 0) {
+	alert('second');
+} // false; не выполниться
+if (null || -1 && 1) {
+	alert('third');
+} // true; выполниться
 
 // 15
 const login = prompt("Введите логин :");
 
-if (login === `Админ`) {
-  const password = prompt(`Введите пароль:`);
+if (login === "Админ") {
+  const password = prompt("Введите пароль:");
 
-  if (password === `Я главный`) alert(`Здравствуйте!`);
-  else if (password === `` || password === null) alert(`Отменено`);
-	else alert(`Неверный пароль`);
+  if (password === "Я главный") {
+		alert("Здравствуйте!");
+	} else if (password === `` || password === null) {
+		alert("Отменено");
+	} else {
+		alert("Неверный пароль");
+	}
 	
 } else if (login === `` || login === null) {
-	alert(`Отменено`);
+	alert("Отменено");
 } else {
-	alert(`Я вас не знаю`);
+	alert("Я вас не знаю");
 }
 
 // 16
 let i = 3;
 while (i) {
-  alert( i-- );
+  alert(i--);
 } // 1, тк 0 = false и цикл не запуститься дальше
 
 // 17
 // Префиксный вариант ++i:
 let i = 0;
-while (++i < 5) alert( i ); //1 2 3 4 5
+while (++i < 5) {
+	alert(i);
+} //1 2 3 4 5
 
 // Постфиксный вариант i++
 let i = 0;
-while (i++ < 5) alert( i ); //1 2 3 4
+while (i++ < 5) {
+	alert(i);
+} //1 2 3 4
 
 // 18
 // Постфиксная форма:
-for (let i = 0; i < 5; i++) alert( i ); // 0 1 2 3 4
+for (let i = 0; i < 5; i++) {
+	alert(i);
+} // 0 1 2 3 4
 
 // Префиксная форма:
-for (let i = 0; i < 5; ++i) alert( i ); // 0 1 2 3 4
+for (let i = 0; i < 5; ++i) {
+	alert(i);
+} // 0 1 2 3 4
 
 // 19
-for(let i = 2; i <= 10; i += 2) alert(i);
+for(let i = 2; i <= 10; i += 2) {
+	alert(i);
+}
 
 // 20
 for (let i = 0; i < 3; i++) {
-  alert( `number ${i}!` );
+  alert(`number ${i}!`);
 }
 
 let i = -1;
-while(i++ < 2) alert( `number ${i}!` );
+while(i++ < 2) alert(`number ${i}!`);
 
 // 21
-while(true){
-	const number = Number(prompt(`Число`));
+while (true) {
+  const number = Number(prompt("Число"));
 
-	if(number > 100 || number === `` || number === null) {
-		break;
-	}
+  if (number > 100 || number === `` || number === null) {
+    break;
+  }
 }
 
 // 22
 switch (browser) {
-  case "Edge":
+  case 'Edge':
     alert("You've got the Edge!");
-		break;
-		
-  case "Chrome":
-  case "Firefox":
-  case "Safari":
-  case "Opera":
-    alert("Okay we support these browsers too");
+    break;
+
+  case 'Chrome':
+  case 'Firefox':
+  case 'Safari':
+  case 'Opera':
+    alert('Okay we support these browsers too');
     break;
 
   default:
-    alert("We hope that this page looks ok!");
+    alert('We hope that this page looks ok!');
 }
 
-if (browser === "Edge") {
-	alert("You've got the Edge!");
+if (browser === 'Edge') {
+  alert("You've got the Edge!");
 } else if (
-  browser === "Chrome" ||
-  browser === "Firefox" ||
-  browser === "Safari" ||
-  browser === "Opera"
+  browser === 'Chrome' ||
+  browser === 'Firefox' ||
+  browser === 'Safari' ||
+  browser === 'Opera'
 ) {
-	alert("Okay we support these browsers too");
-}	else {
-	alert("We hope that this page looks ok!");
+  alert('Okay we support these browsers too');
+} else {
+  alert('We hope that this page looks ok!');
 } 
 
 // 23
@@ -187,16 +222,16 @@ if (number === 2 || number === 3) {
 
 switch (number) {
   case 0:
-    alert("Вы ввели число 0");
+    alert('Вы ввели число 0');
     break;
   case 1:
-    alert("Вы ввели число 1");
+    alert('Вы ввели число 1');
     break;
   case 2:
   case 3:
-    alert("Вы ввели число 2, а может и 3");
-		break;
-		
+    alert('Вы ввели число 2, а может и 3');
+    break;
+
   default:
     break;
 }
@@ -205,7 +240,7 @@ switch (number) {
 function checkAge(age) {
   if (age > 18) {
     return true;
-	} else {
+  } else {
     // ...
     return confirm('Родители разрешили?');
   }
