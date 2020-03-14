@@ -6,7 +6,7 @@ let user = {
 		console.log(this.name);
 	},
 }; // Потеря ";"
-(user.go)();
+user.go();
 
 // 2
 let obj, method;
@@ -16,7 +16,7 @@ obj = {
 	},
 };
 obj.go(); // (1) [object Object]
-(obj.go)(); // (2) [object Object]
+obj.go(); // (2) [object Object]
 (method = obj.go)(); // (3) undefined из-за потери контекста this
 (obj.go || obj.stop)(); // (4) undefined так же потеря контекста
 
