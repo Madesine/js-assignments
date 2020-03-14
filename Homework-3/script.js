@@ -1,20 +1,20 @@
-`use strict`;
+"use strict";
 // 1
 const user = {};
 
-user.name = `John`;
-user.surname = `Smith`;
+user.name = "John";
+user.surname = "Smith";
 
-user.name = `Pete`;
+user.name = "Pete";
 
 delete user.name;
 
 // 2
 function isEmpty(obj) {
 	for (const key in obj) {
-		return "false";
+		return false;
 	}
-	return "true";
+	return true;
 }
 console.log(isEmpty(user));
 
@@ -45,6 +45,11 @@ const menu = {
 	title: "My menu",
 };
 
-for (const property in menu) {
-	if (typeof menu[property] === "number") menu[property] *= 2;
+function multipleNumeric(obj) {
+	for (const property in obj) {
+		if (typeof obj[property] === "number") {
+			obj[property] *= 2;
+		}
+	}
 }
+multipleNumeric(menu);
