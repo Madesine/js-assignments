@@ -16,7 +16,6 @@ if(prompt(`Какое "официальное" название JavaScript ?`) =
 
 // 4
 const number = Number(prompt("Введите число: "));
-
 if (number > 0) {
   alert('1');
 } else if (number < 0) {
