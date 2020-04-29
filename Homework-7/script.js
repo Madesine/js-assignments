@@ -1,4 +1,5 @@
 "use strict";
+
 // 1
 const user = { name: "John", years: 30 };
 const { name, years: age, isAdmin = false } = user;
